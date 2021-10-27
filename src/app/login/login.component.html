@@ -1,0 +1,29 @@
+<div class="container d-flex justify-content-center"> <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal"> signup </button>
+ <button class="btn btn-primary" data-toggle="modal" data-target="#my-modal" router>Login</button> </div>
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content p-4"> <button type="button" class="close x" data-dismiss="modal" aria-label="Close"> <span aria-hidden="true">&times;</span> </button>
+            <div class="modal-header border-0 mb-2">
+                <h5 class="modal-title" id="exampleModalLabel">Daily</h5> <button type="button" class="close" aria-label="Close" disabled='true'> </button>
+            </div>
+            <div class="modal-body">
+
+                <h3 class="mb-4 title">New<br />Account</h3>
+                <div class="form-group"> <input type="text" id="name" #myname class="form-control p-0" required style="box-shadow: none;border-radius:0px"> <label class="form-control-placeholder p-0" for="name lbl">Full Name</label> </div>
+                <span>{{alertname}}</span>
+                <div class="form-group"> <input type="text" id="email" class="form-control p-0" required style="box-shadow: none;border-radius:0px"> <label class="form-control-placeholder p-0" for="name">Email</label> </div>
+
+                <div class="form-group"> <input type="text" id="password" #mypass class="form-control p-0" required style="box-shadow: none;border-radius:0px"> <label class="form-control-placeholder p-0" for="password">Password</label> </div> 
+                
+                
+                
+                <label class="tc">By signing up I accept the <strong>Terms & Conditions</strong> of Daily</label>
+
+            </div>
+            
+<div class="modal-footer border-0 mb-4"> <button type="button" class="btn signup col-6 col-md-6" data-dismiss="modal" (click)="abc(myname.value,mypass.value)" routerLink="login">Signup</button> </div>
+        </div>
+    </div>
+</div>
+
+<router-outlet></router-outlet>

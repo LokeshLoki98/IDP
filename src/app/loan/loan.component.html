@@ -1,0 +1,45 @@
+<div class="container">
+    <h1>Bank of Loki <img src="../assets/loki.jpg" alt=""></h1>
+    <div class="container1">
+    
+    <form>
+  
+      <label>Principle amount:</label><input type="text" #principal placeholder="Enter Principle Amount"><br>
+  
+      <label>Month:</label><input type="text" #month placeholder="Enter Number of Months"><br>
+  
+      <label>Rate of Intrest :</label><input type="text" value="{{roi}}" #rate placeholder="Rate of Interest"><br>
+  
+      <label>Loan Type</label>
+  
+      <select id="myval" (change)="select(loan.value)" #loan>
+        <option value="0">Please Select Loan Type</option>
+  
+        <option value=5> Vehicle Loan </option >
+  
+        <option value=6.9>Home Loan</option>
+  
+        <option value=5>Personal Loan</option>
+  
+        <option value=4.5>Education Loan</option>
+  
+      </select><br>
+  
+      Calculate Loan : <input type="button" class="calculate"value="Clic here" (click)="calculate(principal.value,month.value,rate.value)"><br>
+  
+      <h5>Amount paid per month:{{b}}</h5>
+  
+    </form>
+  
+    <input type="text" [(ngModel)]="mydata" style="width: 300px;height: 40px;border-radius: 20px;">  
+  
+    <br>
+    
+    {{mydata}}
+  
+  </div>
+
+  <app-c1></app-c1>
+    
+  
+  </div>
